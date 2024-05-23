@@ -1,0 +1,32 @@
+.button_quantity_group {
+  border: 1px solid rgb(240, 237, 237);
+  min-width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 0px;
+}
+
+.button_quantity_group span {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.number {
+  font-size: 10px;
+}
+
+.decrease_btn,
+.increase_btn {
+  cursor: pointer;
+
+  &:active {
+    background-color: rgb(212, 214, 218);
+  }
+}

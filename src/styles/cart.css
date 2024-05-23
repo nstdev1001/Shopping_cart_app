@@ -1,0 +1,20 @@
+/* .image_product_in_cart {
+  height: 300px;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: small;
+  }
+  .image_product_in_cart {
+    height: 150px;
+    max-width: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    padding: 5px;
+  }
+} */

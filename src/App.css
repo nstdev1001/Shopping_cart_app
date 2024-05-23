@@ -1,0 +1,142 @@
+html {
+  ::-webkit-scrollbar {
+    width: 10px; /* Độ rộng của thanh cuộn */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Màu nền của vùng chứa thanh cuộn */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, #789ec4, #185ea5);
+    border-radius: 5px; /* Bo góc thanh cuộn */
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Màu của thanh cuộn khi hover */
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #185ea5;
+  height: 50px;
+}
+
+.navbar-brand {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.product_page_container {
+  margin-top: 70px;
+}
+
+/* .search_filter_container {
+
+} */
+
+.product_list_wrapper {
+  overflow: scroll;
+  height: 85vh;
+}
+
+.logo {
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.products_container {
+  margin-top: 70px;
+  box-sizing: border-box;
+}
+
+.display_type_bar {
+  /* border: 1px solid orangered; */
+  display: flex;
+  align-items: center;
+}
+
+.btn_view_group {
+  flex: 1;
+}
+
+.product_quantity {
+  flex: 1;
+  text-align: center;
+}
+
+.sort_group {
+  flex: 1;
+  justify-content: flex-end;
+  /* border: 1px solid blue; */
+}
+
+.each_product {
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 5px;
+  height: 300px;
+}
+
+.image_window_view {
+  width: 90%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.name_product::first-letter {
+  text-transform: uppercase;
+}
+
+.shipping_detait {
+  width: 300px;
+}
+
+.grid_btn {
+  border: 1px solid blue;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.image_list_view {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.detail_product_container {
+  max-height: 80%;
+  box-sizing: border-box;
+}
+
+.image_detail_product {
+  width: 100%;
+  max-height: 90%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.description_list_view {
+  height: 70px;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.customize_product {
+  border-top: 1px solid rgba(128, 128, 128, 0.261);
+  padding-top: 15px;
+  padding-bottom: 50px;
+}
+
+/* .cart_list_products {
+} */
