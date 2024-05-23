@@ -17,7 +17,7 @@ export const colorSlice = createSlice({
     setColor(state, action: PayloadAction<Color>) {
       state.code = action.payload.code;
       state.name = action.payload.name;
-      console.log("action.payload.name: ", action.payload.name);
+      // console.log("action.payload.name: ", action.payload.name);
     },
   },
 });

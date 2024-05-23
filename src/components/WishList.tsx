@@ -19,7 +19,7 @@ const WishList = () => {
     (state: WishListState) => state.wishList
   );
 
-  console.log("wishListItems at wish list tsx: ", wishListItems);
+  // console.log("wishListItems at wish list tsx: ", wishListItems);
 
   const handleShowDetail = (productId: number) => {
     navigate(`/products/${productId}`);
@@ -79,76 +79,72 @@ const WishList = () => {
                   </div>
                 </div>
                 {/* each product */}
-                {wishListItems.map(
-                  (wishListItem: WishListItems, _key: number) => (
-                    <div className="col-md-6 col-12 mt-4">
-                      <div
-                        className="each_product"
+                {wishListItems.map((wishListItem: WishListItems) => (
+                  <div key={wishListItems.id} className="col-md-6 col-12 mt-4">
+                    <div
+                      className="each_product"
+                      style={{
+                        backgroundColor: "white",
+                        height: "fit-content",
+                      }}
+                    >
+                      <img
+                        src={wishListItem.image}
+                        alt=""
+                        className="image_window_view"
                         style={{
-                          backgroundColor: "white",
-                          height: "fit-content",
+                          height: "300px",
+                          width: "100%",
+                          cursor: "pointer",
                         }}
-                      >
-                        <img
-                          src={wishListItem.image}
-                          alt=""
-                          className="image_window_view"
-                          style={{
-                            height: "300px",
-                            width: "100%",
-                            cursor: "pointer",
-                          }}
-                          onClick={() => handleShowDetail(wishListItem.id)}
-                        />
-                        <div className="p-3">
-                          <div className="d-flex align-items-center justify-content-between">
-                            <span className="name_product">
-                              <strong className="h5 fw-bold">
-                                {wishListItem.name}
-                              </strong>
-                            </span>
-                            <span
-                              className="h5"
-                              style={{ color: "orange", marginBottom: "0" }}
-                            >
-                              $
-                              <strong>{`${(wishListItem.price / 100).toFixed(
-                                2
-                              )}`}</strong>
-                            </span>
-                          </div>
-                          <p className="mb-0">
-                            Category: {wishListItem.category}
-                          </p>
-                          <p>Company: {wishListItem.company}</p>
-                          <div className="d-flex align-items-center justify-content-between">
-                            <Tooltip
-                              title="Remove from wish lish"
-                              placement="right"
-                            >
-                              <Checkbox
-                                checked={wishListItem.checked}
-                                // checked={true}
-                                icon={<FavoriteBorder />}
-                                checkedIcon={<Favorite />}
-                                onChange={() =>
-                                  handleToggleChecked(wishListItem)
-                                }
-                              />
-                            </Tooltip>
-                            <Button
-                              variant="outlined"
-                              color="primary"
-                              onClick={() => handleShowDetail(wishListItem.id)}
-                            >
-                              View details
-                            </Button>
-                          </div>
+                        onClick={() => handleShowDetail(wishListItem.id)}
+                      />
+                      <div className="p-3">
+                        <div className="d-flex align-items-center justify-content-between">
+                          <span className="name_product">
+                            <strong className="h5 fw-bold">
+                              {wishListItem.name}
+                            </strong>
+                          </span>
+                          <span
+                            className="h5"
+                            style={{ color: "orange", marginBottom: "0" }}
+                          >
+                            $
+                            <strong>{`${(wishListItem.price / 100).toFixed(
+                              2
+                            )}`}</strong>
+                          </span>
+                        </div>
+                        <p className="mb-0">
+                          Category: {wishListItem.category}
+                        </p>
+                        <p>Company: {wishListItem.company}</p>
+                        <div className="d-flex align-items-center justify-content-between">
+                          <Tooltip
+                            title="Remove from wish lish"
+                            placement="right"
+                          >
+                            <Checkbox
+                              checked={wishListItem.checked}
+                              // checked={true}
+                              icon={<FavoriteBorder />}
+                              checkedIcon={<Favorite />}
+                              onChange={() => handleToggleChecked(wishListItem)}
+                            />
+                          </Tooltip>
+                          <Button
+                            variant="outlined"
+                            color="primary"
+                            onClick={() => handleShowDetail(wishListItem.id)}
+                          >
+                            View details
+                          </Button>
                         </div>
                       </div>
                     </div>
-                  )
-                )}
+                  </div>
+                ))}
               </div>
             </div>
           </div>

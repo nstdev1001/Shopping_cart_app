@@ -13,7 +13,7 @@ function ColorPicker() {
   ];
   const [selectedColor, setSelectedColor] = useState(colorData[0]);
   const dispatch = useDispatch();
-  console.log("selectedColor: ", selectedColor);
+  // console.log("selectedColor: ", selectedColor);
 
   const handleColorClick = (color: any) => {
     setSelectedColor(color);

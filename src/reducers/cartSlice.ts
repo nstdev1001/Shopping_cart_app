@@ -39,7 +39,7 @@ export const cartSlice = createSlice({
 
       if (itemIndex === -1) {
         state.cartItems.push({ ...action.payload });
-        console.log("action.payload: ", action.payload);
+        // console.log("action.payload: ", action.payload);
         toast.success(`Added product to cart!`, {
           autoClose: 1500,
         });

@@ -31,7 +31,7 @@ export const wishListSlice = createSlice({
           autoClose: 1500,
         });
       }
-      console.log("payload in wishListSlice ", action.payload);
+      // console.log("payload in wishListSlice ", action.payload);
     },
     toggleWishlistItemChecked: (
       state,

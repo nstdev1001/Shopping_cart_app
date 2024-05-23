@@ -42,19 +42,6 @@ const CartPage = () => {
     dispatch(getTotal());
   });
 
-  // const [productInCart, setProductInCart] = useState<CartItems[] | undefined>();
-
-  // useEffect(() => {
-  //   fetch(`http://localhost:8888/cart/`)
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       setProductInCart(res);
-  //     })
-  //     .catch((error) => {
-  //       console.error(error);
-  //     });
-  // }, []);
-
   const handleDecreaseProduct = async (item: CartItems) => {
     dispatch(decreaseQuantityInCart(item));
 
@@ -84,15 +71,15 @@ const CartPage = () => {
 
   const handleDeleteProduct = (item: CartItems) => {
     dispatch(deleteFromCart(item));
-    console.log("item", item);
+    // console.log("item", item);
   };
 
   const handleContinueShopping = () => {
     navigate("/products");
   };
 
-  console.log("cart", cart);
-  console.log("cartItems: ", cartItems);
+  // console.log("cart", cart);
+  // console.log("cartItems: ", cartItems);
 
   const handleCheckout = async () => {
     try {
@@ -134,7 +121,7 @@ const CartPage = () => {
           checkoutData
         );
 
-        console.log("Checkout successful!", response);
+        // console.log("Checkout successful!", response);
         dispatch(resetCart());
 
         const continueShopping = await Swal.fire({
@@ -150,7 +137,7 @@ const CartPage = () => {
 
         navigate(continueShopping.isConfirmed ? "/products" : "/cart");
       } else {
-        console.log("Checkout cancelled");
+        // console.log("Checkout cancelled");
       }
     } catch (error) {
       console.error("Error during checkout:", error);
