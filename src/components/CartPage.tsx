@@ -117,10 +117,7 @@ const CartPage = () => {
           })),
         };
 
-        const response = await CheckoutProductService.postCheckoutProduct(
-          checkoutData
-        );
-
+        await CheckoutProductService.postCheckoutProduct(checkoutData);
         // console.log("Checkout successful!", response);
         dispatch(resetCart());
 
